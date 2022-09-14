@@ -7,5 +7,4 @@ const Column = ({children}) => {
         <div style={columnStyle}>{children}</div>
     )
 }
-
 export default Column;

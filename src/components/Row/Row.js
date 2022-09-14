@@ -1,11 +1,24 @@
-const Row = ({children}) => {
+import PropTypes from 'prop-types'
+
+const Row = ({justifyContent, dataTestId, children}) => {
     let rowStyle = {
         display: "flex",
-        flexDirection: "row"
+        flexDirection: "row",
+        justifyContent: `${justifyContent}`
     }
     return(
-        <div style={rowStyle}>{children}</div>
+        <div data-testid={dataTestId} style={rowStyle}>{children}</div>
     )
+}
+
+Row.propTypes = {
+    justifyContent: PropTypes.oneOf(["space-between", "space-around", "center"]),
+    children :  PropTypes.arrayOf(PropTypes.element).isRequired,
+    dataTestId : PropTypes.string.isRequired
+}
+
+Row.defaultProps = {
+    justifyContent : "space-around"
 }
 
 export default Row;
