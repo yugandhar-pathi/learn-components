@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-const Row = ({justifyContent, dataTestId, children}) => {
+export const Row = ({justifyContent, dataTestId, children}) => {
     let rowStyle = {
         display: "flex",
         flexDirection: "row",
@@ -20,5 +20,3 @@ Row.propTypes = {
 Row.defaultProps = {
     justifyContent : "space-around"
 }
-
-export default Row;

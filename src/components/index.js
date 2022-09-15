@@ -1,2 +1,7 @@
 export {Button} from './Button/Button'
 export {Text} from './Text/Text'
+export {Card} from './Card/Card'
+export {Column} from './Column/Column'
+export {Row} from './Row/Row'
+export {Input} from './Input/Input'
+export {Typography} from './Typography/Typography'

@@ -1,6 +1,4 @@
-import {Button, Text} from './components'
-import Row from './components/Row/Row';
-import Column from './components/Column/Column';
+import {Button, Text, Card, Column, Row, Input, Typography} from './components'
 
 function App() {
   return (
@@ -21,8 +19,14 @@ function App() {
         <Text dataTestId="column-three" size="small">Column Three</Text>
         <Text dataTestId="column-four" size="small">Column Four</Text>
       </Column>
-    </>
+      <Card heading="Header two" content='Main Content' buttonName="Learn More"></Card>
+      <Card heading="Header three" picture="https://www.bing.com/th?id=OIP.Ky0Jd3zUxcwi7S5XWV2bxAHaF7&w=279&h=223&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2" altText="rose" buttonName="Learn More"></Card>
+      <Card heading="Header One" content="main content one" picture="https://www.bing.com/th?id=OIP.Ky0Jd3zUxcwi7S5XWV2bxAHaF7&w=279&h=223&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2" altText="rose" buttonName="Learn More"></Card>
+      <Input placeHolder="Test Input"/>
+      <Typography text="Hello" variant6/>
+      </>
   );
 }
 
 export default App;
+ 

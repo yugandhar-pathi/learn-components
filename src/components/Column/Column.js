@@ -1,4 +1,4 @@
-const Column = ({children}) => {
+export const Column = ({children}) => {
     let columnStyle = {
         display: "flex",
         flexDirection:"column"
@@ -7,4 +7,3 @@ const Column = ({children}) => {
         <div style={columnStyle}>{children}</div>
     )
 }
-export default Column;
