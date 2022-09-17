@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-export const Input = ({text, basic, outlined, filled, placeHolder}) =>{
+export const Input = ({text, styleType, placeHolder}) =>{
 
     const myStyle ={
         width: "25%",
@@ -12,23 +12,23 @@ export const Input = ({text, basic, outlined, filled, placeHolder}) =>{
         fontSize : "20px"
     }
 
-    if(basic){
+    if(styleType === "basic"){
       myStyle.border = "1px solid black";
     }
 
-    if(outlined){
+    if(styleType === "outlined"){
         myStyle.border = "2px solid black";
         textStyle.color = "blue";
     }
 
-    if(filled){
+    if(styleType === "filled"){
         myStyle.backgroundColor = "gray";
         textStyle.color = "green";
     }
     
     return(
         <div>
-        <div style={textStyle}>{text}</div>
+        <label style={textStyle}>{text}</label>
         <input style={myStyle} placeholder={placeHolder} />
         </div>
     )
