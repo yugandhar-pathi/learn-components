@@ -1,23 +1,12 @@
 import PropTypes from 'prop-types'
+import {CardStyle} from './Card.styles'
+import {Column} from '../Column/Column'
 
 export const Card = ({heading, content, picture, buttonName, altText}) => {
-    const cardStyle = {
-        boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
-        transition: "0.3s",
-        width: "20%",
-        margin: "1%"
-    }
-
-    const divStyle = {
-        display: "flex",
-        flexDirection: "column",
-        padding: "6%"
-    }
-
 
     return(
-       <div style={cardStyle}>
-           <div style={divStyle}>
+       <CardStyle>
+           <Column>
                <h2><b>{heading}</b></h2>
                {
                 (content && picture) ? 
@@ -28,8 +17,8 @@ export const Card = ({heading, content, picture, buttonName, altText}) => {
                 <div>{content || <img src={picture} alt={altText} width="100%"/>}</div>
                }
                <button style={{border:"none", color:"blue"}}>{buttonName}</button>  
-            </div>         
-        </div>
+            </Column>         
+        </CardStyle>
     )
 }
 
@@ -39,3 +28,5 @@ Card.propTypes = {
     buttonName: PropTypes.string.isRequired,
     altText: PropTypes.string
 }
+
+

@@ -1,15 +1,11 @@
 import PropTypes from 'prop-types'
+import {TextStyle} from './Text.styles'
 
-const TextSize = {
-    small: '18px',
-    medium: '22px',
-    large: '26px'
-}
 
 export const Text = ({ size, dataTestId, children }) => {
-    const data = TextSize[size]
+  
     return (
-        <p data-testid={dataTestId} style={{fontSize:`${data}`, lineHeight:`${data}`}}>{children}</p>
+        <TextStyle data-testid={dataTestId} size={size}>{children}</TextStyle>
     )
 }
 
