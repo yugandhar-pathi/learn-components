@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Small Button 1`] = `
+<p
+  class="sc-bczRLJ dWpahr"
+  data-testid="large-text"
+>
+  Small
+</p>
+`;
+
+exports[`Snapshot medium Button 1`] = `
+<p
+  class="sc-bczRLJ jjGmFX"
+  data-testid="large-text"
+>
+  medium
+</p>
+`;
