@@ -7,11 +7,12 @@ export default {
 
 const Template = (args) => <Button {...args} />;
 
-export const Primary = () => <Button label="button" primary/>
-// Primary.args = {
-//     label: 'Button',
-//     primary: true
-// };
+//export const Primary = () => <Button label="Button" primary />
+export const Primary = Template.bind({});
+Primary.args = {
+    label: 'Button',
+    primary: true
+};
 
 export const Secondary = Template.bind({});
 Secondary.args = {

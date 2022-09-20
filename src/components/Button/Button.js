@@ -1,18 +1,8 @@
 import PropTypes from 'prop-types'
+import {StyledButton} from './Button.styles'
 
 export const Button = ({label, primary, secondary, ...props}) => {
-    let style = {
-        padding: '5px',
-        borderRadius: '5px',
-    }
-    if(primary) {
-        style.backgroundColor = "green"
-        style.color = "white"
-    }
-    if(secondary){
-        style.padding = "8px"
-    }
-    return <button style={style} {...props}>{label}</button>
+    return <StyledButton  primary={primary} secondary={secondary} {...props}>{label}</StyledButton>
 }
 
 Button.propTypes = {

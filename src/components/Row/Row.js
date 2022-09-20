@@ -1,13 +1,10 @@
 import PropTypes from 'prop-types'
+import {RowStyle} from './Row.styles'
 
 export const Row = ({justifyContent, dataTestId, children}) => {
-    let rowStyle = {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: `${justifyContent}`
-    }
+    
     return(
-        <div data-testid={dataTestId} style={rowStyle}>{children}</div>
+        <RowStyle data-testid={dataTestId} justifyContent={justifyContent}>{children}</RowStyle>
     )
 }
 
