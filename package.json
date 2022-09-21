@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "set CI=true && react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -o ./docs -s public"
@@ -35,6 +35,12 @@
           "import/no-anonymous-default-export": "off"
         }
       }
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom" : [
+      "./src/components/**/*.js",
+      "!./src/components/**/*.stories.js"
     ]
   },
   "browserslist": {
