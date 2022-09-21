@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot for column component 1`] = `
+<div
+  class="sc-bczRLJ cSQhoY"
+  data-testid="column-id"
+>
+  <p>
+    Column one
+  </p>
+  <p>
+    Column two
+  </p>
+</div>
+`;

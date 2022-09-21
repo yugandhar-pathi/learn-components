@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot for Input 1`] = `
+<div
+  data-testid="input-id"
+>
+  <label
+    class="sc-bczRLJ kZPjBP"
+  >
+    my text
+  </label>
+  <input
+    class="sc-gsnTZi fYkahX"
+    placeholder="my placeholder"
+  />
+</div>
+`;

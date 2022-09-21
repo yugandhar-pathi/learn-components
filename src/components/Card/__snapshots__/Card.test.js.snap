@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card snapshot 1`] = `
+<div
+  class="sc-bczRLJ dzDZer"
+  data-testid="test-card"
+>
+  <div
+    class="sc-gsnTZi hyUOGO"
+    data-testid="col-test-card"
+  >
+    <h2
+      data-testid="header-test-card"
+    >
+      <b>
+        header
+      </b>
+    </h2>
+    <div>
+      <div>
+        my Content
+      </div>
+      <img
+        alt="alternate text"
+        src="image"
+        width="100%"
+      />
+    </div>
+    <button
+      data-testid="button-test-card"
+      style="color: blue;"
+    >
+      my Button
+    </button>
+  </div>
+</div>
+`;

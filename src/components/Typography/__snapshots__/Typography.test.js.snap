@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot for Typography component 1`] = `
+<p
+  data-testid="typography-id"
+>
+  <h6>
+    my text
+  </h6>
+</p>
+`;
