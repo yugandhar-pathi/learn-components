@@ -1,13 +1,20 @@
-import {Input, Button, Column, Home} from './components'
-import {useHistory} from 'react-router-dom'
+import { Input, Button, Column } from "../../components"
+//import {Home} from '../Home/Home'
+import {useNavigate} from 'react-router-dom'
 
 export const Login = () => {
-    let history = useHistory()
+
+    const navigate = useNavigate()
+
+    const LoginHandle = () =>{
+        navigate('/home')
+    }
+
     return(
         <Column>
-        <Input text='Enter User Name' type='text'/>
-        <Input text='Enter Password' type='password'/>
-        <Button label="Login" primary onClick={()=> history.push(' /Home')}/>
-        </Column> 
+        <Input styleType="outlined" text="User Name :" type="text" placeholder="Enter Your User Name Here"/>
+        <Input styleType="outlined" text="Password :" type="password" placeholder="Enter Your Password Here"/>
+        <Button label="Login" primary onClick={LoginHandle}/>
+        </Column>
     )
 }
