@@ -1,10 +1,10 @@
-import {Login} from './components'
+import {Button} from './components'
 
 
 function App() {
   return (
     <>
-    <Login/>
+    <Button label="Click"/>
     </>
   );
 }
