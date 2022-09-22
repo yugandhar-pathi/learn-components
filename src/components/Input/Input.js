@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import { LabelStyle, InputStyle } from './Input.styles'
 
-export const Input = ({text, styleType, placeHolder}) =>{
+export const Input = ({text, styleType, placeHolder, dataTestId, type}) =>{
 
     return(
-        <div>
+        <div data-testid={dataTestId}>
         <LabelStyle>{text}</LabelStyle>
-        <InputStyle styleType={styleType} placeholder={placeHolder}/>
+        <InputStyle styleType={styleType} type={type} placeholder={placeHolder}/>
         </div>
     )
 }
@@ -14,7 +14,9 @@ export const Input = ({text, styleType, placeHolder}) =>{
 Input.propTypes = {
  styleType : PropTypes.oneOf(["basic", "outlined", "filled"]),
  placeHolder : PropTypes.string.isRequired,
- text : PropTypes.string.isRequired
+ text : PropTypes.string.isRequired,
+ dataTestId: PropTypes.string.isRequired,
+ type : PropTypes.string.isRequired
 }
 
 Input.defaultProps = {

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-export const Typography = ({variant1, variant2, variant3, variant4, variant5, variant6, text}) =>{
+export const Typography = ({dataTestId, variant1, variant2, variant3, variant4, variant5, variant6, text}) =>{
     let val;
     if(variant1){
       val =  <h1>{text}</h1>
@@ -21,7 +21,7 @@ export const Typography = ({variant1, variant2, variant3, variant4, variant5, va
         val =  <h6>{text}</h6>
       }
     return(
-        <p>{val}</p>
+        <p data-testid={dataTestId}>{val}</p>
     )
 }
 
@@ -32,5 +32,6 @@ variant3: PropTypes.string,
 variant4: PropTypes.string,
 variant5: PropTypes.string,
 variant6: PropTypes.string,
-Text: PropTypes.string
+Text: PropTypes.string,
+dataTestId: PropTypes.string.isRequired
 }
