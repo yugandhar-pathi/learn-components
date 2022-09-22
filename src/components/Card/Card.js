@@ -2,12 +2,12 @@ import PropTypes from 'prop-types'
 import {CardStyle} from './Card.styles'
 import {Column} from '../Column/Column'
 
-export const Card = ({heading, content, picture, buttonName, altText}) => {
+export const Card = ({heading, content, picture, buttonName, altText, dataTestId}) => {
 
     return(
-       <CardStyle>
-           <Column>
-               <h2><b>{heading}</b></h2>
+       <CardStyle data-testid={dataTestId}>
+           <Column dataTestId={`col-${dataTestId}`}>
+               <h2 data-testid={`header-${dataTestId}`}><b>{heading}</b></h2>
                {
                 (content && picture) ? 
                 <div>
@@ -16,7 +16,7 @@ export const Card = ({heading, content, picture, buttonName, altText}) => {
                 </div> :
                 <div>{content || <img src={picture} alt={altText} width="100%"/>}</div>
                }
-               <button style={{border:"none", color:"blue"}}>{buttonName}</button>  
+               <button data-testid={`button-${dataTestId}`} style={{border:"none", color:"blue"}}>{buttonName}</button>  
             </Column>         
         </CardStyle>
     )
