@@ -15,7 +15,12 @@ i18n
       en:{
         translation:{
           "Welcome to React": "Welcome to react and react-i18next",
-          "Welcome_Home": "Welcome Kalyani!!"
+          "Welcome_Home": "Welcome Kalyani!!",
+          "logout" : "Logout",
+          "username" : "User Name :",
+          "password" : "Password :",
+          "username_placeholder" : "Enter Your User Name Here",
+          "password_placeholder" : "Enter Your Password Here",
         }
       }
     },

@@ -13,7 +13,7 @@ export const Home = () =>{
     return(
         <>
         <p>{t('Welcome_Home')}</p>
-        <Button label="Logout" onClick={LogoutHandle}/>
+        <Button label={t('logout')} onClick={LogoutHandle}/>
         </>
     )
 }
