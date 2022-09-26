@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import {Provider} from 'react-redux'
+import Store from '../src/Store'
 
 i18n
 .use(initReactI18next)
@@ -31,7 +33,9 @@ i18n
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Provider store={Store}>
   <RouterProvider router={router} />
+  </Provider>
 );
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

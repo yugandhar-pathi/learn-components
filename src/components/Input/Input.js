@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import { LabelStyle, InputStyle } from './Input.styles'
 
-export const Input = ({text, styleType, placeHolder, dataTestId, type}) =>{
+export const Input = ({text, styleType, placeHolder, dataTestId, type, ...props}) =>{
 
     return(
         <div data-testid={dataTestId}>
         <LabelStyle>{text}</LabelStyle>
-        <InputStyle styleType={styleType} type={type} placeholder={placeHolder}/>
+        <InputStyle styleType={styleType} type={type} placeholder={placeHolder} {...props}/>
         </div>
     )
 }
